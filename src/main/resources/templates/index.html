@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="jakarta.faces.html">
-<h:head>
-    <title>JSF + Spring Boot</title>
-</h:head>
-<h:body>
-    <h1>#{helloJsfBean.message}</h1>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
 
-    <h:form>
-        <h:inputText value="#{helloJsfBean.name}" />
-        <h:commandButton value="Say Hello!" action="#{helloJsfBean.generateGreeting}" />
-    </h:form>
-</h:body>
+    <title>Hello Bean</title>
+
+</head>
+<body>
+
+<h1 th:text="${message}">Placeholder message</h1>
+
+<p>This message comes from the Spring bean lifecycle.</p>
+
+</body>
 </html>
